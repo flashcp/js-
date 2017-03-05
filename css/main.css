@@ -1,0 +1,143 @@
+/*--------------------------基本样式*/
+.section{
+    text-align: center;
+    background-color: #46ab64;
+    color: #FDFCF9;
+}
+.pp-easing {
+    -webkit-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    -moz-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    -o-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    /* custom */
+    -webkit-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    -moz-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    -o-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    /* custom */
+}
+
+/*--------------------------js调用样式*/
+
+.leave{
+    background-color: #376f31;
+}
+
+/*--------------------------section1*/
+
+#section1 .self{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #478059;
+    border-radius: 150px;
+    background: url("../images/-110808.jpg") no-repeat right center;
+    background-size: 110%;
+    margin: 0px auto;
+}
+
+/*--------------------------section2*/
+
+#section2 .projects{
+    width: 1080px;
+    margin: 50px auto;
+}
+#section2 .projects .item{
+    width: 230px;
+    height: 230px;
+    text-align: center;
+    border: 10px solid #e7a45f;
+    border-radius: 230px;
+    padding-top: 50px;
+    margin: 10px 20px 0 20px;
+    box-sizing: border-box;
+    float: left;
+    background-color: #333333;
+    transition: all 1s;
+}
+#section2 .projects .item:hover{
+    background-color: transparent;
+}
+
+/*--------------------------section3*/
+
+#section3 .table{
+    width: 880px;
+    height: 400px;
+    margin: 0px auto;
+    border-left: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+    padding-left: 90px;
+    box-sizing: border-box;
+}
+#section3 .tri-top{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #333333;
+    margin: 0 auto;
+    transform: translate(-438px,0px);
+}
+#section3 .tri-ri{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #333333;
+    margin: 0 auto;
+    transform: translate(450px,-12px);
+}
+
+#section3 .table .skills{
+    width: 50px;
+    float: left;
+}
+#section3 .table .skills:nth-child(1){
+    height: 335px;
+    margin: 60px 60px;
+    background-color: #e7a45f;
+}
+#section3 .table .skills:nth-child(2){
+    height: 235px;
+    margin: 160px 60px;
+    background-color: #e7a45f;
+}
+#section3 .table .skills:nth-child(3){
+    height: 235px;
+    margin: 160px 60px;
+     background-color: #e7a45f;
+ }
+#section3 .table .skills:nth-child(4){
+    height: 195px;
+    margin: 200px 60px;
+    background-color: #e7a45f;
+}
+
+#section3 .kills-intro {
+    width: 880px;
+    margin: 0px auto;
+    padding-left: 90px;
+    box-sizing: border-box;
+
+    height: 100px;
+    background-color: aquamarine;
+}
+#section3 .kills-intro:after{
+    clear: both;
+    content:'.';
+    display: block;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+#section3 .kills-intro p{
+    font-size: 18px;
+    display: inline-block;
+    margin: 0px 35px;
+}
+
+/*--------------------------section4*/
+
+#section4 h1{
+    margin-bottom: 50px;
+}
