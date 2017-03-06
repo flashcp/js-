@@ -39,105 +39,149 @@
 
 #section2 .projects{
     width: 1080px;
-    margin: 50px auto;
+    height: 500px;
+    /*background-color: #999;*/
+    margin: 0px auto;
 }
-#section2 .projects .item{
-    width: 230px;
-    height: 230px;
-    text-align: center;
-    border: 10px solid #e7a45f;
-    border-radius: 230px;
-    padding-top: 50px;
-    margin: 10px 20px 0 20px;
-    box-sizing: border-box;
+#section2 .projects a{
+    color: #fdfcf9;
+}
+#section2 .projects .pro{
     float: left;
+}
+#section2 .projects .projects-le,.projects-ri{
+    width: 500px;
+}
+#section2 .projects .projects-mi{
+    width: 80px;
+    height: 500px;
+    /*background-color: #962f1f;*/
+}
+#section2 .projects .projects-mi .line{
+    width: 10px;
+    height: 480px;
+    margin: 0px auto;
+    background-color: #bf3f2b;
+}
+#section2 .projects .projects-mi .cricle{
+    width: 80px;
+    height: 500px;
+    background: url("../images/cricle.svg") no-repeat center 18%,
+                url("../images/cricle.svg") no-repeat center 31.5%,
+                url("../images/cricle.svg") no-repeat center 54%,
+                url("../images/cricle.svg") no-repeat center 67.9%;
+    background-size: 40%;
+    transform: translate(0,-100%);
+}
+#section2 .projects .projects-le{
+    padding-top: 50px;
+}
+#section2 .projects .projects-ri{
+    padding-top: 115px;
+}
+#section2 .projects .pro .item{
+    width: 380px;
+    height: 120px;
     background-color: #333333;
+    margin: 0px auto 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
     transition: all 1s;
 }
-#section2 .projects .item:hover{
-    background-color: transparent;
-}
-
-/*--------------------------section3*/
-
-#section3 .table{
-    width: 880px;
-    height: 400px;
-    margin: 0px auto;
-    border-left: 5px solid #333333;
-    border-bottom: 5px solid #333333;
-    padding-left: 90px;
-    box-sizing: border-box;
-}
-#section3 .tri-top{
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid #333333;
-    margin: 0 auto;
-    transform: translate(-438px,0px);
-}
-#section3 .tri-ri{
-    width: 0;
-    height: 0;
+#section2 .projects .pro .item .triangle-le{
+    float: right;
+    width: 0px;
+    height: 0px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 20px solid #333333;
-    margin: 0 auto;
-    transform: translate(450px,-12px);
-}
+    transform: translate(100%,50%);
+    transition: all 1s;
 
-#section3 .table .skills{
-    width: 50px;
+}
+#section2 .projects .pro .item .triangle-ri{
     float: left;
-}
-#section3 .table .skills:nth-child(1){
-    height: 335px;
-    margin: 60px 60px;
-    background-color: #e7a45f;
-}
-#section3 .table .skills:nth-child(2){
-    height: 235px;
-    margin: 160px 60px;
-    background-color: #e7a45f;
-}
-#section3 .table .skills:nth-child(3){
-    height: 235px;
-    margin: 160px 60px;
-     background-color: #e7a45f;
- }
-#section3 .table .skills:nth-child(4){
-    height: 195px;
-    margin: 200px 60px;
-    background-color: #e7a45f;
-}
-
-#section3 .kills-intro {
-    width: 880px;
-    margin: 0px auto;
-    padding-left: 90px;
-    box-sizing: border-box;
-
-    height: 100px;
-    background-color: aquamarine;
-}
-#section3 .kills-intro:after{
-    clear: both;
-    content:'.';
-    display: block;
     width: 0px;
     height: 0px;
-    visibility: hidden;
-}
-#section3 .kills-intro p{
-    font-size: 18px;
-    display: inline-block;
-    margin: 0px 35px;
-}
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #333333;
+    transform: translate(-100%,50%);
+    transition: all 1s;
 
+}
+#section2 .projects .item:hover{
+    color: #333333;
+    background-color: transparent;
+}
+#section2 .projects .pro .item:hover .triangle-le{
+    transform: rotate(180deg);
+}
+#section2 .projects .pro .item:hover .triangle-ri{
+    transform: rotate(180deg);
+}
+/*--------------------------section3*/
+
+#section3 .table{
+    width: 1120px;
+    margin: 0 auto;
+}
+#section3 .table .skills{
+    width: 240px;
+    border-radius: 230px;
+    margin: 10px 20px 0 20px;
+    box-sizing: border-box;
+    float: left;
+    color: #333333;
+}
+#section3 .table .skills p{
+    margin-top: 1em;
+}
+#section3 .table .skills h2{
+    transform: translate(0,240%);
+}
+#section3 .table .skills svg{
+    stroke-dasharray: 518px;
+    stroke-dashoffset: 518px;
+}
+#section3 .table .skills .svg{
+    animation-name: svg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both ;
+    -moz-animation-fill-mode: both ;
+    -o-animation-fill-mode: both ;
+    animation-fill-mode: both ;
+}
+@keyframes svg {
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
 /*--------------------------section4*/
 
 #section4 h1{
     margin-bottom: 50px;
+}
+
+/*--------------------------section5*/
+
+#section5 a:hover{
+    color: #333333;
+}
+#section5 .icon{
+    margin-top: 20px;
+}
+#section5 .icon .fa{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    color: #fdfcf9;
+    background-color: #144d5d;
+    transition: all 500ms;
+}
+#section5 .icon .fa:hover{
+    border-radius: 10px;
+    background-color: #333333;
 }

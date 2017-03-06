@@ -8,7 +8,7 @@ $(function () {
         loopBottom:true,
         navigation: {
             'position': 'right',
-            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4','page5']
+            'tooltips': ['HOME', 'PRACTICE', 'PROFESSIONS', 'HONOR','MORE']
         },
         onLeave: function (index,nextIndex,direction) {
             console.log(index);
@@ -18,6 +18,19 @@ $(function () {
             var a=$('.section');
             a.removeClass('leave');
             $(a[index-1]).addClass('leave');
+
+            if (index==3){
+                var c=$('#section3 svg');
+                c.removeClass('svg');
+                console.log(123);
+            }
+        },
+        afterLoad: function (anchorLink,index) {
+            if (index==3){
+                var c=$('#section3 svg');
+                c.addClass('svg');
+                console.log(12);
+            }
         }
     })
 })
