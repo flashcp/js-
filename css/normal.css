@@ -36,3 +36,18 @@ a{
     /*color: #fdfcf9;*/
     text-decoration: none;
 }
+
+/*-------------------mobile*/
+body{
+    margin: 0px;
+}
+.section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#section3{
+    overflow: auto;
+}
+#section5{
+    padding-bottom: 80px;
+}

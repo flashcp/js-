@@ -19,6 +19,8 @@ function IsMobile() {
 $(function () {
     if(IsMobile()){
         console.log('mobile');
+        var c=$('#section3 svg');
+        c.addClass('svg');
     }
     else {
         console.log('ispc');
@@ -52,6 +54,6 @@ $(function () {
         //        }
         //    }
         //})
-        
+
     }
 })
