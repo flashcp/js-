@@ -188,10 +188,30 @@
     background-color: #333333;
 }
 
-/*---------------------------*/
+/*---------------------------responsive*/
 
 @media screen and (max-width: 760px) {
+    #section2 .projects{
+        width: 500px;
+        /*height: 500px;*/
+        margin: 0px auto;
+        overflow: auto;
+    }
     #section3 .table{
         width: 300px;
     }
+
+}
+
+/*-----------------------------mobile*/
+
+#section3{
+    overflow: auto;
+}
+
+#section3 .table .skills h2{
+    transform: translate(0,300%);
+}
+#section5{
+    padding-bottom: 80px;
 }

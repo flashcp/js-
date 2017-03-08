@@ -2,10 +2,6 @@ body{
     font-family: 微软雅黑,Verdana,Arial;
     font-weight: bold;
 }
-h1,h2,h3,h4,h5,p{
-    margin: 0em;
-    padding: 0em;
-}
 h1{
     font-size: 3.2em;
     margin: 0.3em 0 0;
@@ -45,9 +41,28 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#section3{
-    overflow: auto;
+
+h1{
+    font-size: 2.4em;
+    margin: 0.3em 0 0;
 }
-#section5{
-    padding-bottom: 80px;
+h2{
+    font-size: 2.2em;
+    margin: 0.24em 0 0;
+}
+h3{
+    font-size: 1.8em;
+    margin: 0.18em 0 0;
+}
+h4{
+    font-size: 1.4em;
+    margin: 0.12em 0 0;
+}
+h5{
+    font-size: 1.0em;
+    margin: 0.06em 0 0;
+}
+p{
+    font-size: 0.6em;
+    margin: 0.06em 0 0;
 }

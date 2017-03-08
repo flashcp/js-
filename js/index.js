@@ -2,7 +2,7 @@
  * Created by 鹏 on 2017/3/5.
  */
 
-function IsMobile() {
+IsMobile=function() {
     var userAgentInfo = navigator.userAgent;
     var Agents = ["Android", "iPhone",
         "SymbianOS", "Windows Phone",
@@ -16,15 +16,32 @@ function IsMobile() {
     }
     return flag;
 }
+
+PCcss=function() {
+    var head = document.getElementsByTagName('head')[0],
+        cssURL = 'css/jquery.pagepiling.css',
+        linkTag = document.createElement('link');
+
+    linkTag.id = 'dynamic-style';
+    linkTag.href = cssURL;
+    linkTag.setAttribute('rel','stylesheet');
+    linkTag.setAttribute('media','all');
+    linkTag.setAttribute('type','text/css');
+
+    head.appendChild(linkTag);
+};
+
 $(function () {
     if(IsMobile()){
         console.log('mobile');
         var c=$('#section3 svg');
         c.addClass('svg');
+
+
     }
     else {
         console.log('ispc');
-
+        //PCcss();
         //$('#pagepiling').pagepiling({
         //    loopBottom:true,
         //    navigation: {
