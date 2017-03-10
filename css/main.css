@@ -189,27 +189,28 @@
         width: 100%;
 }
 .mobile #section2 .projects:after{
-        width: 0px;
-        height: 0px;
-        clear: both;
-        content: '.';
-        display: block;
-        visibility: hidden;
+    width: 0px;
+    height: 0px;
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
 }
 .mobile #section2 .projects .pro{
-        width: 100%;
+    width: 100%;
 }
 .mobile #section2 .projects .pro .item{
-        width: 80%;
+    width: 80%;
     height: 95px;
+    pointer-events:none
 }
 .mobile #section2 .projects .projects-ri{
-        padding-top: 0px;
+    padding-top: 0px;
 }
 
 
 .mobile #section3 .table{
-        width: 300px;
+    width: 300px;
 }
 .mobile #section3 .table:after{
     width: 0px;
