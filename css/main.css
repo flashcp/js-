@@ -39,7 +39,6 @@
 
 #section2 .projects{
     width: 1080px;
-    height: 500px;
     /*background-color: #999;*/
     margin: 0px auto;
 }
@@ -80,7 +79,7 @@
     padding-top: 115px;
 }
 #section2 .projects .pro .item{
-    width: 380px;
+    /*width: 380px;*/
     height: 120px;
     background-color: #333333;
     margin: 0px auto 50px;
@@ -129,8 +128,7 @@
 
 }
 #section3 .table .skills{
-    width: 240px;
-    border-radius: 230px;
+    /*width: 240px;*/
     margin: 10px 20px 0 20px;
     box-sizing: border-box;
     float: left;
@@ -188,30 +186,45 @@
     background-color: #333333;
 }
 
-/*---------------------------responsive*/
-
-@media screen and (max-width: 760px) {
-    #section2 .projects{
-        width: 500px;
-        /*height: 500px;*/
-        margin: 0px auto;
-        overflow: auto;
-    }
-    #section3 .table{
-        width: 300px;
-    }
-
-}
-
 /*-----------------------------mobile*/
 
-#section3{
-    overflow: auto;
-}
 
-#section3 .table .skills h2{
+.mobile #section2 .projects{
+        width: 100%;
+    }
+.mobile #section2 .projects:after{
+        width: 0px;
+        height: 0px;
+        clear: both;
+        content: '.';
+        display: block;
+        visibility: hidden;
+    }
+.mobile #section2 .projects .pro{
+        width: 100%;
+    }
+.mobile #section2 .projects .pro .item{
+        width: 80%;
+    }
+.mobile #section2 .projects .projects-ri{
+        padding-top: 0px;
+    }
+
+
+.mobile #section3 .table{
+        width: 300px;
+    }
+.mobile #section3 .table:after{
+    width: 0px;
+    height: 0px;
+    content: '.';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+.mobile #section3 .table .skills h2{
     transform: translate(0,300%);
 }
-#section5{
+.mobile #section5{
     padding-bottom: 80px;
 }

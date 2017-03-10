@@ -17,60 +17,51 @@ IsMobile=function() {
     return flag;
 }
 
-PCcss=function() {
-    var head = document.getElementsByTagName('head')[0],
-        cssURL = 'css/jquery.pagepiling.css',
-        linkTag = document.createElement('link');
 
-    linkTag.id = 'dynamic-style';
-    linkTag.href = cssURL;
-    linkTag.setAttribute('rel','stylesheet');
-    linkTag.setAttribute('media','all');
-    linkTag.setAttribute('type','text/css');
+PcCss= function () {
+    var head=$('head');
+    head.append('<link'+' '+'href="css/jquery.pagepiling.css"'+' '+'rel="stylesheet"'+' '+'type="text/css">');
+}
 
-    head.appendChild(linkTag);
+AddSvg=function(){
+    var c=$('#section3 svg');
+    c.addClass('svg');
 };
 
 $(function () {
     if(IsMobile()){
         console.log('mobile');
-        var c=$('#section3 svg');
-        c.addClass('svg');
-
-
+        $('html').addClass('mobile');
+        $('.projects-mi').remove();
+        AddSvg();
     }
     else {
         console.log('ispc');
-        //PCcss();
-        //$('#pagepiling').pagepiling({
-        //    loopBottom:true,
-        //    navigation: {
-        //        'position': 'right',
-        //        'tooltips': ['HOME', 'PRACTICE', 'PROFESSIONS', 'HONOR','MORE']
-        //    },
-        //    onLeave: function (index,nextIndex,direction) {
-        //        console.log(index);
-        //        console.log(nextIndex);
-        //        console.log(direction);
-        //        console.log($('.section')[index-1]);
-        //        var a=$('.section');
-        //        a.removeClass('leave');
-        //        $(a[index-1]).addClass('leave');
-        //
-        //        if (index==3){
-        //            var c=$('#section3 svg');
-        //            c.removeClass('svg');
-        //            console.log(123);
-        //        }
-        //    },
-        //    afterLoad: function (anchorLink,index) {
-        //        if (index==3){
-        //            var c=$('#section3 svg');
-        //            c.addClass('svg');
-        //            console.log(12);
-        //        }
-        //    }
-        //})
+        PcCss();
+        $('#pagepiling').pagepiling({
+            loopBottom:true,
+            navigation: {
+                'position': 'right',
+                'tooltips': ['主页', '实践', '技能', '荣誉','了解更多']
+            },
+            onLeave: function (index,nextIndex,direction) {
+                console.log($('.section')[index-1]);
+                var a=$('.section');
+                a.removeClass('leave');
+                $(a[index-1]).addClass('leave');
+
+                if (index==3){
+                    var c=$('#section3 svg');
+                    c.removeClass('svg');
+                }
+            },
+            afterLoad: function (anchorLink,index) {
+                var c=$('#section3 svg');
+                if (index==3){
+                    AddSvg();
+                }
+            }
+        })
 
     }
 })
