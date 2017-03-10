@@ -16,8 +16,6 @@ IsMobile=function() {
     }
     return flag;
 }
-
-
 PcCss= function () {
     var head=$('head');
     head.append('<link'+' '+'href="css/jquery.pagepiling.css"'+' '+'rel="stylesheet"'+' '+'type="text/css">');
@@ -33,6 +31,7 @@ $(function () {
         console.log('mobile');
         $('html').addClass('mobile');
         $('.projects-mi').remove();
+        $(".item").removeClass("hover");
         AddSvg();
     }
     else {
@@ -56,7 +55,6 @@ $(function () {
                 }
             },
             afterLoad: function (anchorLink,index) {
-                var c=$('#section3 svg');
                 if (index==3){
                     AddSvg();
                 }
