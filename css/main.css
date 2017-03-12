@@ -1,0 +1,228 @@
+/*--------------------------基本样式*/
+.section{
+    text-align: center;
+    background-color: #46ab64;
+    color: #FDFCF9;
+}
+.pp-easing {
+    -webkit-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    -moz-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    -o-transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    transition: all 500ms cubic-bezier(0.25,0.1,0.25,1);
+    /* custom */
+    -webkit-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    -moz-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    -o-transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    transition-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+    /* custom */
+}
+
+/*--------------------------js调用样式*/
+
+.leave{
+    background-color: #376f31;
+}
+
+/*--------------------------section1*/
+
+#section1 .self{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #478059;
+    border-radius: 150px;
+    background: url("../images/-110808.jpg") no-repeat right center;
+    background-size: 110%;
+    margin: 0px auto;
+}
+
+/*--------------------------section2*/
+
+#section2 .projects{
+    width: 1080px;
+    margin: 0px auto;
+}
+#section2 .projects a{
+    color: #fdfcf9;
+}
+#section2 .projects .pro{
+    float: left;
+}
+#section2 .projects .projects-le,.projects-ri{
+    width: 500px;
+}
+#section2 .projects .projects-mi{
+    width: 80px;
+    height: 500px;
+}
+#section2 .projects .projects-mi .line{
+    width: 10px;
+    height: 480px;
+    margin: 0px auto;
+    background-color: #bf3f2b;
+}
+#section2 .projects .projects-mi .cricle{
+    width: 80px;
+    height: 500px;
+    background: url("../images/cricle.svg") no-repeat center 18%,
+                url("../images/cricle.svg") no-repeat center 31.5%,
+                url("../images/cricle.svg") no-repeat center 54%,
+                url("../images/cricle.svg") no-repeat center 67.9%;
+    background-size: 40%;
+    transform: translate(0,-100%);
+}
+#section2 .projects .projects-le{
+    padding-top: 50px;
+}
+#section2 .projects .projects-ri{
+    padding-top: 115px;
+}
+#section2 .projects .pro .item{
+    height: 120px;
+    background-color: #333333;
+    margin: 0px auto 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+#section2 .projects .pro .item .triangle-le{
+    float: right;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #333333;
+    transform: translate(100%,50%);
+    transition: all 1s;
+
+}
+#section2 .projects .pro .item .triangle-ri{
+    float: left;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #333333;
+    transform: translate(-100%,50%);
+    transition: all 1s;
+
+}
+#section2 .projects .item:hover{
+    color: #333333;
+    background-color: transparent;
+}
+#section2 .projects .pro .item:hover .triangle-le{
+    transform: rotate(180deg);
+}
+#section2 .projects .pro .item:hover .triangle-ri{
+    transform: rotate(180deg);
+}
+/*--------------------------section3*/
+
+#section3 .table{
+    width: 1120px;
+    margin: 0 auto;
+    clear: both;
+
+}
+#section3 .table .skills{
+    margin: 10px 20px 0 20px;
+    box-sizing: border-box;
+    float: left;
+    color: #333333;
+}
+#section3 .table .skills p{
+    margin-top: 1em;
+}
+#section3 .table .skills h2{
+    transform: translate(0,240%);
+}
+#section3 .table .skills svg{
+    stroke-dasharray: 518px;
+    stroke-dashoffset: 518px;
+}
+#section3 .table .skills .svg{
+    animation-name: svg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both ;
+    -moz-animation-fill-mode: both ;
+    -o-animation-fill-mode: both ;
+    animation-fill-mode: both ;
+}
+@keyframes svg {
+    to{
+        stroke-dashoffset: 0px;
+    }
+}
+/*--------------------------section4*/
+
+#section4 h1{
+    margin-bottom: 50px;
+}
+
+/*--------------------------section5*/
+
+#section5 a:hover{
+    color: #333333;
+}
+#section5 .icon{
+    margin-top: 20px;
+}
+#section5 .icon .fa{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    color: #fdfcf9;
+    background-color: #144d5d;
+    transition: all 500ms;
+}
+#section5 .icon .fa:hover{
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+/*-----------------------------mobile*/
+
+
+.mobile #section2 .projects{
+        width: 100%;
+}
+.mobile #section2 .projects:after{
+    width: 0px;
+    height: 0px;
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+}
+.mobile #section2 .projects .pro{
+    width: 100%;
+}
+.mobile #section2 .projects .pro .item{
+    width: 80%;
+    height: 95px;
+    pointer-events:none
+}
+.mobile #section2 .projects .projects-ri{
+    padding-top: 0px;
+}
+
+
+.mobile #section3 .table{
+    width: 300px;
+}
+.mobile #section3 .table:after{
+    width: 0px;
+    height: 0px;
+    content: '.';
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+.mobile #section3 .table .skills h2{
+    transform: translate(0,310%);
+}
+.mobile #section5{
+    padding-bottom: 80px;
+}
